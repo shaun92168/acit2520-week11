@@ -29,11 +29,11 @@ app.use((request, response, next) => {
 		}
 	});
 
-	response.render('maintenance.hbs', {
-		title: 'Maintenance'
-	});
+	// response.render('maintenance.hbs', {
+	// 	title: 'Maintenance'
+	// });
 
-	//next();
+	next();
 });
 
 app.get('/', (request, response) => {
