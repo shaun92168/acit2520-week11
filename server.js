@@ -29,11 +29,11 @@ app.use((request, response, next) => {
 		}
 	});
 
-	// response.render('maintenance.hbs', {
-	// 	title: 'Maintenance'
-	// });
+	response.render('maintenance.hbs', {
+		title: 'Maintenance'
+	});
 
-	next();
+	// next();
 });
 
 app.get('/', (request, response) => {
@@ -83,5 +83,5 @@ app.get('/404', (request, response) => {
 })
 
 app.listen(port, () => {
-	console.log('Server is up on the port 8080');
+	console.log(`Server is up on the port ${port}`);
 });
