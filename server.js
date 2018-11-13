@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-const port = process.env.PROT || 8080;
+const port = process.env.PORT || 8080;
 
 var app = express();
 
@@ -29,11 +29,11 @@ app.use((request, response, next) => {
 		}
 	});
 
-	response.render('maintenance.hbs', {
-		title: 'Maintenance'
-	});
+	// response.render('maintenance.hbs', {
+	// 	title: 'Maintenance'
+	// });
 
-	// next();
+	next();
 });
 
 app.get('/', (request, response) => {
